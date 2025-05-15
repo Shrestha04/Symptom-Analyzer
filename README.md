@@ -20,11 +20,13 @@ A smart and interactive web application that predicts possible diseases based on
 ## 🚀 Installation
 
 1. git clone https://github.com/Shrestha04/Symptom-Analyzer.git
-2. cd Symptom-Analyzer
-3. pip install -r requirements.txt
-4. Create a virtual environment
-3. Install dependencies: pip install -r requirements.txt
-4. Run the Flask app: python main.py
+   
+   cd Symptom-Analyzer
+   
+2. pip install -r requirements.txt
+3. Create a virtual environment
+4. Install dependencies: pip install -r requirements.txt
+5. Run the Flask app: python main.py
 
 ---
 
@@ -52,15 +54,16 @@ Additionally, the app has a Gemini-powered chatbot to assist with health queries
 ---
 
 ## ✨ Usage
-To run the app locally:python main.py
+To run the app locally: python main.py
 
 Then open your browser and go to: http://localhost:5000
 
 ---
 
 ## 🤖 Gemini Health Chatbot
-- The /chatbot route of the app provides a conversational chatbot using Gemini 2.0 Flash model. 
-- Users can interact with the bot for any health queries, emotional support, mental health guidance, or general wellness conversation.
+The /chatbot route of the app provides a conversational chatbot using Gemini 2.0 Flash model. 
+
+Users can interact with the bot for any health queries, emotional support, mental health guidance, or general wellness conversation.
 
 ---
 
