@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 import os
 
 # Load API key from .env
-GEMINI_API_KEY=AIzaSyD3IRVPt2HsTzoyc-PYlNXCoE8tx_uHR5o
+GEMINI_API_KEY="AIzaSyD3IRVPt2HsTzoyc-PYlNXCoE8tx_uHR5o"
 
 MODEL_NAME = "gemini-2.0-flash"
 
