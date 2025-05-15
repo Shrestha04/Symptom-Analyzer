@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Symptom Analyzer - About Us</title>
+    <link rel="stylesheet" href="static/about.css" />
+  </head>
+  <body>
+    <header>
+      <a href="/" style="text-decoration: none; color: inherit">
+        <h1>Symptom Analyzer</h1>
+      </a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="{{ url_for('symptoms') }}">Symptoms</a>
+        <a href="{{ url_for('about') }}">About Us</a>
+      </nav>
+    </header>
+
+    <section class="about-content">
+      <div class="about-text">
+        <h2>About Symptom Analyzer</h2>
+
+        <div class="block">
+          <p>
+            At <span class="highlight">Symptom Analyzer</span>, we believe
+            everyone deserves peace of mind about their health. With life's fast
+            pace and overwhelming information online, it's easy to feel lost
+            when symptoms arise.
+          </p>
+          <p>
+            That's why we built Symptom Analyzer — a supportive, AI-driven
+            platform designed to interpret your symptoms and suggest meaningful
+            next steps.
+          </p>
+        </div>
+
+        <h3>Why We Do This</h3>
+        <div class="block">
+          <p>
+            Health issues can create confusion and fear. We know that having
+            symptoms without answers is stressful.
+          </p>
+          <p>
+            Our goal is to offer you a first step toward clarity — helping you
+            understand potential causes and actions, with compassion and
+            convenience.
+          </p>
+        </div>
+
+        <h3>Our Mission</h3>
+        <div class="block">
+          <p>
+            We’re on a mission to make health analysis quick, accessible, and
+            meaningful. Whether it’s a common cold or something more complex,
+            you shouldn’t have to wait or worry endlessly. Symptom Analyzer
+            empowers you to act smarter, sooner.
+          </p>
+        </div>
+
+        <h3>Health Chatbot</h3>
+        <div class="block">
+          <p>
+            In addition to physical health, we understand the importance of
+            mental well-being. That’s why we’ve integrated a
+            <span class="highlight">Health Advisor</span> — your AI companion
+            designed to provide emotional support, encouragement, and
+            stress-relieving conversation.
+          </p>
+          <p>
+            While it's not a replacement for professional therapy, it’s a safe
+            and friendly space where you can talk, reflect, and feel heard —
+            24/7. We believe mental health matters just as much as physical
+            health.
+          </p>
+        </div>
+
+        <div class="about-button-container">
+          <a href="{{ url_for('symptoms') }}" class="about-button">
+            Start Analyzing Symptoms
+          </a>
+          <a href="{{ url_for('chatbot') }}" class="about-button secondary">
+            Try the Health Chatbot
+          </a>
+        </div>
+      </div>
+
+      <div class="about-image">
+        <img src="static/Images/about.png" alt="Health and Care Illustration" />
+      </div>
+    </section>
+
+    <div class="caution-note">
+      <p>
+        <strong>⚠️ Caution:</strong> This tool is intended for educational and
+        project purposes only. Do not rely solely on it for diagnosis. Please
+        consult a licensed medical professional for any health concerns.
+      </p>
+    </div>
+  </body>
+</html>

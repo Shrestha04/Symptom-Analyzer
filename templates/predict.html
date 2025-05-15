@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="static\predict.css" />
+  </head>
+  <body>
+    <header>
+      <a href="/" style="text-decoration: none; color: inherit">
+        <h1>Symptom Analyzer</h1>
+      </a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="{{ url_for('symptoms') }}">Symptoms</a>
+        <a href="{{ url_for('about') }}">About Us</a>
+      </nav>
+    </header>
+
+    <div class="container">
+      <h2>Prediction Result</h2>
+
+      <!-- Predicted Disease -->
+      <div class="prediction-box">
+        <strong>Disease Predicted:</strong> {{ predicted_disease }}
+      </div>
+
+      <!-- Cards Display -->
+      <div class="card-grid">
+        <!-- Description -->
+        <div class="card">
+          <h3>Description</h3>
+          <p>{{ dis_des }}</p>
+        </div>
+
+        <!-- Precautions -->
+        <div class="card">
+          <h3>Precautions</h3>
+          {% if dis_pre %}
+          <ul>
+            {% for precaution in dis_pre %}
+            <li>{{ precaution }}</li>
+            {% endfor %}
+          </ul>
+          {% else %}
+          <p>No precautions listed.</p>
+          {% endif %}
+        </div>
+
+        <!-- Medications -->
+        <div class="card">
+          <h3>Medications</h3>
+          {% if dis_med %}
+          <ul>
+            {% for med in dis_med %}
+            <li>{{ med }}</li>
+            {% endfor %}
+          </ul>
+          {% else %}
+          <p>No medications found.</p>
+          {% endif %}
+        </div>
+
+        <!-- Workouts -->
+        <div class="card">
+          <h3>Workouts</h3>
+          {% if dis_wrkout %}
+          <ul>
+            {% for workout in dis_wrkout %}
+            <li>{{ workout }}</li>
+            {% endfor %}
+          </ul>
+          {% else %}
+          <p>No workouts suggested.</p>
+          {% endif %}
+        </div>
+
+        <!-- Diets -->
+        <div class="card">
+          <h3>Diets</h3>
+          {% if dis_die %}
+          <ul>
+            {% for food in dis_die %}
+            <li>{{ food }}</li>
+            {% endfor %}
+          </ul>
+          {% else %}
+          <p>No diet suggestions available.</p>
+          {% endif %}
+        </div>
+
+        <!-- Consultations -->
+        <div class="card">
+          <h3>Consultations</h3>
+          {% if dis_specialist %}
+          <ul>
+            {% for consult in dis_specialist %}
+            <li>{{ consult }}</li>
+            {% endfor %}
+          </ul>
+          {% else %}
+          <p>No consultation suggestions found.</p>
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- Back to Home Button -->
+      <a href="/" class="btn-back">Back to Home</a>
+    </div>
+
+    <form method="POST" action="/download_pdf">
+      <input type="hidden" name="disease" value="{{ predicted_disease }}" />
+      <input type="hidden" name="description" value="{{ dis_des }}" />
+
+      {% for p in dis_pre %}
+      <input type="hidden" name="precautions" value="{{ p }}" />
+      {% endfor %} {% for m in dis_med %}
+      <input type="hidden" name="medications" value="{{ m }}" />
+      {% endfor %} {% for d in dis_die %}
+      <input type="hidden" name="diet" value="{{ d }}" />
+      {% endfor %} {% for w in dis_wrkout %}
+      <input type="hidden" name="workout" value="{{ w }}" />
+      {% endfor %} {% for s in dis_specialist %}
+      <input type="hidden" name="special" value="{{ s }}" />
+      {% endfor %}
+
+      <button type="submit" class="btn-download">Download Report (PDF)</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,440 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-size: 10px; 
+  line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  color: #00e6e6;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+  color: #00b09b;
+}
+
+p {
+  font-weight: 300;
+  font-size: 1.1rem;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+header {
+  background-color: #111;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #00e6e6;
+}
+
+
+nav a {
+  color: #ccc;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #00e6e6;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 10%;
+}
+
+.text-box {
+  max-width: 50%;
+}
+
+.text-box h2 {
+  font-size: 2.5rem; 
+  margin-bottom: 1rem;
+  color: #00e6e6;
+  line-height: 1.2;
+}
+
+.text-box p {
+  font-size: 1.2rem; 
+  line-height: 1.6;
+}
+
+.image-box img {
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.button-container {
+  margin-top: 50px;
+}
+
+.symptom-button,
+.chatbot-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #00b09b, #008291);
+  color: white;
+  font-weight: 600;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+
+.symptom-button:hover,
+.chatbot-btn:hover {
+  background: linear-gradient(135deg, #00e6e6, #00b09b);
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.cards-container {
+  display: flex;
+  gap: 1.5rem;
+  max-width: 650px; 
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin-top: 30px;
+}
+
+.card {
+  flex: 1 1 280px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  padding: 1.5rem 1.8rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  color: #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s ease;
+  font-size: 0.9rem;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 230, 230, 0.5);
+}
+
+.card h3 {
+  color: #00e6e6;
+  margin-bottom: 0.7rem;
+  font-size: 1.3rem;
+}
+
+.card p {
+  flex-grow: 1;
+  line-height: 1.4;
+  margin-bottom: 1.4rem;
+}
+
+.mental-health-support {
+  padding: 4rem 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.02);
+  margin-top: 3rem;
+}
+
+.support-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.5rem 3rem;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.support-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+.support-card h3 {
+  font-size: 2rem;
+  color: #00e6e6;
+  margin-bottom: 1rem;
+}
+
+.support-card p {
+  font-size: 1.15rem;
+  color: #ddd;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.support-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #00b09b, #008291);
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.support-btn:hover {
+  background: linear-gradient(135deg, #00e6e6, #00b09b);
+  transform: scale(1.05);
+}
+
+.mental-health-box {
+  margin-top: 3rem;
+  padding: 1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-left: 4px solid #00e6e6;
+  border-radius: 12px;
+  color: #ddd;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  max-width: 500px;
+}
+
+.mental-health-box h3 {
+  margin-top: 0;
+  color: #00e6e6;
+  font-size: 1.5rem;
+}
+
+.mental-health-box p {
+  font-size: 1.1rem;
+  margin: 0.8rem 0 1.5rem;
+  line-height: 1.6;
+}
+
+.chatbot-support {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  z-index: 1000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.chatbot-support img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.chatbot-tooltip {
+  position: absolute;
+  bottom: 70px;
+  right: 80%;
+  transform: translateX(50%);
+  background-color: #2a2a2a;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.chatbot-support:hover .chatbot-tooltip {
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .main-content {
+    padding: 3rem 6%;
+  }
+
+  .text-box h2 {
+    font-size: 2.5rem;
+  }
+
+  .text-box p {
+    font-size: 1.3rem;
+  }
+
+  .image-box img {
+    max-width: 320px;
+  }
+
+  .symptom-button,
+  .chatbot-btn {
+    padding: 10px 24px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 8%;
+  }
+
+  .text-box {
+    max-width: 100%;
+  }
+
+  .text-box h2 {
+    font-size: 2rem;
+  }
+
+  .text-box p {
+    font-size: 1.15rem;
+  }
+
+  .image-box {
+    margin-top: 2rem;
+  }
+
+  .image-box img {
+    max-width: 100%;
+  }
+
+  .symptom-button,
+  .chatbot-btn {
+    padding: 10px 22px;
+    font-size: 0.9rem;
+  }
+
+  .mental-health-box {
+    padding: 1.2rem 1.5rem;
+  }
+
+  .mental-health-box h3 {
+    font-size: 1.3rem;
+  }
+
+  .mental-health-box p {
+    font-size: 1rem;
+  }
+
+  .chatbot-btn {
+    font-size: 0.9rem;
+    padding: 9px 22px;
+  }
+
+
+  .cards-container {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .card {
+    flex: none;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .chatbot-support {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+
+  .chatbot-support img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .chatbot-tooltip {
+    bottom: 60px;
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 2rem 5%;
+  }
+
+  .text-box h2 {
+    font-size: 1.6rem;
+  }
+
+  .text-box p {
+    font-size: 1rem;
+  }
+
+  .symptom-button,
+  .chatbot-btn {
+    padding: 8px 20px;
+    font-size: 0.85rem;
+  }
+
+  header {
+    padding: 1rem 1.5rem;
+  }
+}

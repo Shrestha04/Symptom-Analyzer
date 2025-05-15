@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Symptom Analyzer - Home</title>
+    <link rel="stylesheet" href="static\style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="/" style="text-decoration: none; color: inherit;">
+        <h1>Symptom Analyzer</h1>
+      </a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="{{ url_for('symptoms') }}">Symptoms</a>
+        <a href="{{ url_for('about') }}">About Us</a>
+      </nav>
+    </header>
+
+    <section class="main-content">
+      <div class="text-box">
+        <h2>Smart Health Starts Here!</h2>
+        <p style="font-weight: 400">
+          Get instant health insights and recommendations by simply entering
+          your symptoms. We guide you from concern to clarity with AI-powered
+          precision. Click below to get started!
+        </p>
+
+        <div class="cards-container">
+          <div class="card symptom-card">
+            <h3>Analyze Symptoms</h3>
+            <p>
+              Instant health insights and recommendations by entering your
+              symptoms.
+            </p>
+            <a href="{{ url_for('symptoms') }}" class="symptom-button"
+              >Analyze Symptoms</a
+            >
+          </div>
+
+          <div class="card mental-health-card">
+            <h3>ChatBot Support</h3>
+            <p>
+              Feeling stressed? Talk to our AI chatbot for guidance anytime.
+            </p>
+            <a href="{{ url_for('chatbot') }}" class="chatbot-btn">Talk Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="image-box">
+        <img
+          src="static\Images\Every Symptom Matters.png"
+          alt="Healthcare Illustration"
+        />
+      </div>
+    </section>
+
+    <a
+      href="{{ url_for('chatbot') }}"
+      class="chatbot-support"
+      title="Mental Health Chatbot"
+    >
+      <span class="chatbot-tooltip">Health Chatbot</span>
+      <img src="static\Images\Chatbot img.png" alt="Chatbot" />
+    </a>
+  </body>
+</html>

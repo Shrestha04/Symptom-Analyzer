@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AI Chatbot</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='chatbot.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="/" style="text-decoration: none; color: inherit">
+        <h1>Symptom Analyzer</h1>
+      </a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="{{ url_for('symptoms') }}">Symptoms</a>
+        <a href="{{ url_for('about') }}">About Us</a>
+      </nav>
+    </header>
+
+    <div class="container">
+      <div class="card">
+        <div class="card-header">
+          <h4>Mental Health Chatbot</h4>
+        </div>
+        <div class="chat-box" id="chatBox">
+          <!-- Chat messages will appear here -->
+        </div>
+        <div class="card-footer">
+          <input
+            type="text"
+            id="userInput"
+            placeholder="Type your message..."
+            onkeydown="if(event.key==='Enter') sendMessage()"
+          />
+          <button onclick="sendMessage()" class="btn-primary">Send</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="back-button-container">
+      <a href="/" class="back-button">← Back to Home</a>
+    </div>
+
+    <script src="{{ url_for('static', filename='chatbot.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,258 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #111;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #00e6e6;
+}
+
+nav a {
+  color: #ccc;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #00e6e6;
+}
+
+.container {
+  padding: 3rem 10%;
+  flex: 1;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #00e6e6;
+  margin-bottom: 1rem;
+}
+
+.prediction-box {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  padding: 1.2rem;
+  background-color: rgba(0, 230, 230, 0.1);
+  border: 2px solid #00e6e6;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 230, 230, 0.3);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #00e6e6;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 230, 230, 0.2);
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #00e6e6;
+  border-bottom: 1px solid #00e6e650;
+  padding-bottom: 0.5rem;
+}
+
+.card ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.card ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.card p {
+  color: #aaa;
+}
+
+.btn-back {
+  display: block;
+  width: max-content;
+  margin: 3rem auto 0;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #00b09b, #008291);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-back:hover {
+  background: linear-gradient(135deg, #00e6e6, #00b09b);
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.btn-download {
+  display: block;
+  width: max-content;
+  margin: 0rem auto 5rem;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #00b09b, #008291);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+.btn-download:hover {
+  background: linear-gradient(135deg, #00e6e6, #00b09b);
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 3rem 6%;
+  }
+
+  .prediction-box {
+    font-size: 1.4rem;
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+  }
+
+  .card ul li {
+    font-size: 0.95rem;
+  }
+
+  .btn-back,
+  .btn-download {
+    padding: 10px 25px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .container {
+    padding: 2rem 5%;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .prediction-box {
+    font-size: 1.3rem;
+  }
+
+  .card {
+    padding: 1.2rem;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+  }
+
+  .card ul li {
+    font-size: 0.9rem;
+  }
+
+  .btn-back,
+  .btn-download {
+    padding: 10px 22px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem 4%;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .prediction-box {
+    font-size: 1.1rem;
+    padding: 0.8rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  .card ul li {
+    font-size: 0.85rem;
+  }
+
+  .btn-back,
+  .btn-download {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+  }
+}
