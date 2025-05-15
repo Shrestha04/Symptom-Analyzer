@@ -224,6 +224,7 @@ def download_pdf():
     response.headers['Content-Disposition'] = 'attachment; filename=health_report.pdf'
     return response
 
-
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Required by Render
+    app.run(host='0.0.0.0', port=port, debug=True)
+
