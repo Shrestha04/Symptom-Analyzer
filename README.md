@@ -7,7 +7,7 @@ A smart and interactive web application that predicts possible diseases based on
 
 ## 🔍 Features
 
-- 🌡️ Predicts diseases from symptoms using an SVC machine learning model
+- 🌡️ Predicts diseases from symptoms using an machine learning model
 - 💊 Suggests medications, diet plans, and workouts
 - 🧠 Integrated health chatbot using **Gemini API**
 - 📄 Generate and download a personalized PDF health report
