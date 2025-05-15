@@ -32,7 +32,7 @@ A smart and interactive web application that predicts possible diseases based on
 Create a .env file in the root directory and add your Gemini API key:
 
 GOOGLE_API_KEY=your_gemini_api_key_here
-You can get your Gemini API key from Google AI Studio.
+(You can get your Gemini API key from Google AI Studio.)
 
 ---
 
