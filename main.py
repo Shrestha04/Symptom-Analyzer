@@ -135,7 +135,7 @@ def get_predicted_value(patient_symptoms, max_symptoms=5):
 # Gemini response generation function
 def generate_gemini_response(user_message):
     try:
-        model = genai.GenerativeModel("gemini-2.0-flash")  # or your preferred model
+        model = genai.GenerativeModel("gemini-2.0-flash")  
         response = model.generate_content(user_message)
         return response.text if response and response.text else "No response from Gemini."
     except Exception as e:
@@ -225,6 +225,6 @@ def download_pdf():
     return response
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))  # Required by Render
+    port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port, debug=True)
 
