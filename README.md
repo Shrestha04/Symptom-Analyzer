@@ -7,7 +7,7 @@ A smart and interactive web application that predicts possible diseases based on
 
 ## 🔍 Features
 
-- 🌡️ Predicts diseases from symptoms using an machine learning model
+- 🌡️ Predicts diseases from symptoms using a machine learning model
 - 💊 Suggests medications, diet plans, and workouts
 - 🧠 Integrated health chatbot using **Gemini API**
 - 📄 Generate and download a personalized PDF health report
@@ -40,27 +40,25 @@ GOOGLE_API_KEY=your_gemini_api_key_here
 - User selects symptoms from the input.
 - App processes the symptoms and uses a pre-trained ML model to predict the most likely disease.
 - The app then displays:
--- A brief description of the disease
--- Suggested medications and precautions
--- Recommended diet and workouts
--- Appropriate medical specialist
--- User can generate and download a PDF health report.
+  - A brief description of the disease
+  - Suggested medications and precautions
+  - Recommended diet and workouts
+  - Appropriate medical specialist
+  - User can generate and download a PDF health report.
 
 Additionally, the app has a Gemini-powered chatbot to assist with health queries or mental health support.
 
 ---
 
 ## ✨ Usage
-To run the app locally:
-
-python main.py
-Then open your browser and go to:
-http://localhost:5000
+To run the app locally:python main.py
+Then open your browser and go to: http://localhost:5000
 
 ---
 
 ## 🤖 Gemini Health Chatbot
-The /chatbot route of the app provides a conversational chatbot using Gemini 2.0 Flash model. Users can interact with the bot for any health queries, emotional support, mental health guidance, or general wellness conversation.
+- The /chatbot route of the app provides a conversational chatbot using Gemini 2.0 Flash model. 
+- Users can interact with the bot for any health queries, emotional support, mental health guidance, or general wellness conversation.
 
 ---
 
