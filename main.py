@@ -10,11 +10,7 @@ from dotenv import load_dotenv
 import os
 
 # Load API key from .env
-load_dotenv()
-GOOGLE_API_KEY = os.getenv("GEMINI_API_KEY")
-if not GOOGLE_API_KEY:
-    raise ValueError("GOOGLE_API_KEY is not set in the environment variables.")
-genai.configure(api_key=GOOGLE_API_KEY)
+GEMINI_API_KEY=AIzaSyD3IRVPt2HsTzoyc-PYlNXCoE8tx_uHR5o
 
 MODEL_NAME = "gemini-2.0-flash"
 
