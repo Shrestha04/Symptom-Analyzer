@@ -1,7 +1,9 @@
 
 # 🩺 Symptom Analyzer Web App
 
-A smart and interactive web application that predicts possible diseases based on user-reported symptoms and provides medical recommendations such as medications, precautions, diets, workouts, and the appropriate specialist to consult. Integrated with Gemini API for a health chatbot experience.
+A smart and interactive web application that predicts possible diseases based on user-reported symptoms and provides medical recommendations such as medications, precautions, diets, workouts, and the appropriate specialist to consult. 
+
+Integrated with the Gemini API, the app includes a multilingual health chatbot that can assist users in various languages, offering health guidance, emotional support, and general wellness tips—making healthcare accessible and inclusive for a wider audience.
 
 ---
 
@@ -9,7 +11,7 @@ A smart and interactive web application that predicts possible diseases based on
 
 - 🌡️ Predicts diseases from symptoms using a machine learning model
 - 💊 Suggests medications, diet plans, and workouts
-- 🧠 Integrated health chatbot using **Gemini API**
+- 🧠  Integrated multilingual health chatbot using Gemini API for health guidance
 - 📄 Generate and download a personalized PDF health report
 - 🧑‍⚕️ Recommends a relevant medical specialist
 - 🧬 Powered by multiple curated healthcare datasets
@@ -63,7 +65,7 @@ Then open your browser and go to: http://localhost:5000
 ## 🤖 Gemini Health Chatbot
 The /chatbot route of the app provides a conversational chatbot using Gemini 2.0 Flash model. 
 
-Users can interact with the bot for any health queries, emotional support, mental health guidance, or general wellness conversation.
+Users can interact with the bot for any health queries, emotional support, mental health guidance, or general wellness conversation — all in multiple languages for a more inclusive experience.
 
 ---
 
